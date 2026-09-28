@@ -39,8 +39,6 @@ The goal is **not** to make the language as small as possible.
 
 The goal is to create the **simplest system that remains clear, expressive, natural, and expandable**.
 
-This means that simplicity does not mean removing useful distinctions. It means avoiding complexity that does not provide a clear benefit.
-
 ---
 
 # Core Grammar
@@ -75,8 +73,6 @@ Ei di yum buff.
 
 The verb `yum` remains unchanged.
 
-This allows the same basic sentence structure to be reused with different subjects without requiring different verb forms.
-
 ---
 
 ## Pronouns
@@ -92,7 +88,22 @@ Luma Lina uses simple personal pronouns:
 
 There is no grammatical gender distinction.
 
-The pronoun `Sa` can refer to a male or female person because gender is not grammatically encoded in the pronoun system.
+Plural pronouns are formed by using the existing plural marker `di`:
+
+```text
+Ei di
+Ao di
+Sa di
+Nu di
+```
+
+**we / us**
+
+**you all**
+
+**they**
+
+**they / those things**
 
 **File:** [grammar/01-pronouns.md](grammar/01-pronouns.md)
 
@@ -114,7 +125,7 @@ maimai di
 
 **goats**
 
-The same marker can be reused with different types of words.
+The same marker is reused with different types of words.
 
 Examples:
 
@@ -132,7 +143,7 @@ maimai di
 
 **goats**
 
-This is an example of the compositional approach used throughout Luma Lina. Instead of creating separate plural forms for different categories, the existing plural marker `di` is reused.
+This is an important part of the compositional design of Luma Lina. Plurality does not require separate plural forms for different grammatical categories.
 
 **File:** [grammar/02-pluralization.md](grammar/02-pluralization.md)
 
@@ -170,7 +181,7 @@ Sa de maimai
 
 The same structure can be used for other relationships when appropriate.
 
-The system therefore treats possession as part of a broader relationship structure rather than creating separate possessive forms for every pronoun.
+The system uses one reusable relationship marker rather than separate possessive forms for different pronouns.
 
 **File:** [grammar/03-possession.md](grammar/03-possession.md)
 
@@ -218,9 +229,21 @@ Ei na yum buff.
 
 **I do not eat meat.**
 
-`na` can also be used as a negative response to a yes/no question.
+`na` is also the official negative answer to a yes/no question.
 
-Using one general negation marker keeps negative structures consistent instead of requiring separate negative forms for different types of sentences.
+For example:
+
+```text
+Ao yum buff ma?
+
+Na.
+```
+
+**Do you eat meat?**
+
+**No.**
+
+The same marker therefore handles both general negation and negative Boolean answers.
 
 **File:** [grammar/05-negation.md](grammar/05-negation.md)
 
@@ -254,18 +277,28 @@ Ei yum Sao?
 
 The question structure keeps the missing information in the position where the answer would normally occur.
 
-This allows information questions to reuse the normal sentence structure rather than requiring a separate question syntax.
+For example:
+
+```text
+Sao yum buff?
+```
+
+**Who eats meat?**
+
+Here, `Sao` occupies the subject position because the unknown information is the subject.
 
 ## Boolean Answers
 
-The current vocabulary includes:
+Luma Lina uses:
 
 * `yah` = yes
 * `na` = no
 
 Both are **Official**.
 
-`yah` is the positive Boolean answer, while `na` is the negative Boolean answer and also functions as the general negation marker.
+`yah` is the positive Boolean answer.
+
+`na` is the negative Boolean answer and also functions as the general negation marker.
 
 **File:** [grammar/06-questions.md](grammar/06-questions.md)
 
@@ -278,9 +311,21 @@ Luma Lina uses two basic demonstratives:
 * `ti` = this, near
 * `ta` = that, distant
 
-## Proposed Plural Structure
+## Demonstrative Structure
 
-The current **Proposed** system places the demonstrative directly before the noun. The noun carries the plural marker `di`.
+The demonstrative directly modifies the noun.
+
+The noun carries the plural marker `di` when it is plural.
+
+The structure is:
+
+```text
+Demonstrative + Noun
+
+Demonstrative + Noun + di
+```
+
+Examples:
 
 ```text
 ti maimai
@@ -300,15 +345,11 @@ ta maimai di
 
 **those goats**
 
-The structure is:
+This follows the general principle that `di` comes after the word it pluralizes.
 
-```text
-Demonstrative + Noun
+The demonstrative does not take the plural marker directly in a demonstrative+noun phrase. Instead, the noun is pluralized.
 
-Demonstrative + Noun + di
-```
-
-Examples with the copula:
+## Copular Examples
 
 ```text
 ti la maimai.
@@ -328,13 +369,47 @@ ta la maimai di.
 
 **Those are goats.**
 
-This follows the general principle that `di` comes after the word it pluralizes.
+## Possessive Examples
+
+```text
+ta maimai la Ei de maimai.
+
+ta maimai di la Ei di de maimai di.
+```
+
+**That goat is my goat.**
+
+**Those goats are our goats.**
+
+## Questions
+
+```text
+ta la maimai ma?
+
+ta la maimai di ma?
+```
+
+**Is that a goat?**
+
+**Are those goats?**
+
+## Negation
+
+```text
+ta na la maimai.
+
+ta na la maimai di.
+```
+
+**That is not a goat.**
+
+**Those are not goats.**
 
 ### Rule Status
 
-This demonstrative structure is currently **Proposed**.
+This demonstrative system is **Official**.
 
-It replaces the earlier structure:
+It supersedes the earlier structure:
 
 ```text
 ti di maimai di
@@ -342,7 +417,7 @@ ti di maimai di
 ta di maimai di
 ```
 
-but it should not be treated as an Official rule until explicitly accepted.
+The earlier structure is no longer the current demonstrative+noun construction.
 
 **File:** [grammar/07-demonstratives.md](grammar/07-demonstratives.md)
 
@@ -483,13 +558,11 @@ The syntax documentation explains how individual grammatical systems work togeth
 
 ## Sentence Structure
 
-`syntax/sentence-structure.md` documents sentence construction and the combination of grammatical elements.
-
-**File:** [syntax/sentence-structure.md](syntax/sentence-structure.md)
+[syntax/sentence-structure.md](syntax/sentence-structure.md) documents sentence construction and the combination of grammatical elements.
 
 ## Placeholder Convention
 
-`syntax/placeholder-convention.md` explains how English words and other temporary labels are represented when a Luma Lina word has not yet been established.
+[syntax/placeholder-convention.md](syntax/placeholder-convention.md) explains how English words and other temporary labels are represented when a Luma Lina word has not yet been established.
 
 For example:
 
@@ -499,15 +572,13 @@ Ei la [teacher].
 
 Here, `[teacher]` is explicitly a placeholder and is **not** part of the Luma Lina vocabulary.
 
-**File:** [syntax/placeholder-convention.md](syntax/placeholder-convention.md)
-
 ---
 
 # Examples
 
 Actual language examples are collected in:
 
-**File:** [examples/example-sentences.md](examples/example-sentences.md)
+[examples/example-sentences.md](examples/example-sentences.md)
 
 The examples demonstrate the current grammar, including:
 
@@ -524,7 +595,7 @@ The examples demonstrate the current grammar, including:
 
 Examples demonstrate how the language works, but **an example does not automatically create a new grammatical rule**.
 
-This distinction is important because the language is developed through testing. An example can show how a proposed idea might work without making that idea part of the Official grammar.
+This distinction is important because the language is developed through testing. An example can demonstrate how a structure works without independently creating a new grammatical rule.
 
 ---
 
@@ -568,79 +639,40 @@ These files document development history. They do not override the Official gram
 
 # Repository Structure
 
+````text
 ```text
 Luma-Lina/
-
-│
-
 ├── README.md
-
 ├── LICENSE.md
-
 ├── repo-structure.md
-
-│
-
 ├── grammar/
-
 │   ├── 01-pronouns.md
-
 │   ├── 02-pluralization.md
-
 │   ├── 03-possession.md
-
 │   ├── 04-copula.md
-
 │   ├── 05-negation.md
-
 │   ├── 06-questions.md
-
 │   ├── 07-demonstratives.md
-
 │   ├── 08-verbs.md
-
 │   └── 09-word-order.md
-
-│
-
 ├── vocabulary/
-
 │   ├── vocabulary.md
-
 │   └── core-words.md
-
-│
-
 ├── syntax/
-
 │   ├── sentence-structure.md
-
 │   └── placeholder-convention.md
-
-│
-
 ├── writing/
-
 │   └── capitalization.md
-
-│
-
 ├── examples/
-
 │   └── example-sentences.md
-
-│
-
 └── development/
-
     ├── proposals.md
-
     ├── experiments.md
-
     └── rejected.md
 ```
 
-**Detailed repository structure:** [repo-structure.md](repo-structure.md)
+Detailed repository structure: repo-structure.md
+````
 
 **License:** [LICENSE.md](LICENSE.md)
 
@@ -692,13 +724,11 @@ Its basic grammatical foundation currently includes:
 * capitalization;
 * core vocabulary.
 
-Some systems are still being tested and refined. In particular, Proposed features must remain clearly separated from Official grammar.
+The current Official systems provide the foundation for further development.
+
+Practical sentence testing remains an important part of development. Before adding new grammatical complexity, existing structures should be used across multiple ordinary sentences to identify limitations or contradictions.
 
 The current development priority is to **use and test the existing system before adding unnecessary complexity**.
-
-Practical sentence testing is an important part of development. A rule should work across multiple ordinary sentences before becoming part of the Official language.
-
-This allows the language to develop from actual use rather than from a growing collection of rules created only in theory.
 
 ---
 
