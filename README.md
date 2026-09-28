@@ -4,9 +4,11 @@
 
 The project aims to create a language that is easy to learn and use while remaining expressive enough for normal communication. Its grammar favors regular, compositional structures instead of unnecessary exceptions, irregular forms, and complicated word changes.
 
+The language is being developed step by step. Existing systems are tested through practical sentences before new complexity is introduced.
+
 ---
 
-## Name
+# Name
 
 The name **Luma Lina** is formed from two Luma Lina words:
 
@@ -37,6 +39,8 @@ The goal is **not** to make the language as small as possible.
 
 The goal is to create the **simplest system that remains clear, expressive, natural, and expandable**.
 
+This means that simplicity does not mean removing useful distinctions. It means avoiding complexity that does not provide a clear benefit.
+
 ---
 
 # Core Grammar
@@ -61,13 +65,17 @@ For example:
 
 ```text
 Ei yum buff.
+
 Ei di yum buff.
 ```
 
 **I eat meat.**
+
 **We eat meat.**
 
 The verb `yum` remains unchanged.
+
+This allows the same basic sentence structure to be reused with different subjects without requiring different verb forms.
 
 ---
 
@@ -84,7 +92,9 @@ Luma Lina uses simple personal pronouns:
 
 There is no grammatical gender distinction.
 
-**File:** [grammar/01-pronouns.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/01-pronouns.md?utm_source=chatgpt.com)
+The pronoun `Sa` can refer to a male or female person because gender is not grammatically encoded in the pronoun system.
+
+**File:** [grammar/01-pronouns.md](grammar/01-pronouns.md)
 
 ---
 
@@ -96,10 +106,12 @@ It follows the word it pluralizes.
 
 ```text
 maimai
+
 maimai di
 ```
 
 **goat**
+
 **goats**
 
 The same marker can be reused with different types of words.
@@ -108,15 +120,21 @@ Examples:
 
 ```text
 Ei di
+
 Ao di
+
 maimai di
 ```
 
 **we / us**
+
 **you all**
+
 **goats**
 
-**File:** [grammar/02-pluralization.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/02-pluralization.md?utm_source=chatgpt.com)
+This is an example of the compositional approach used throughout Luma Lina. Instead of creating separate plural forms for different categories, the existing plural marker `di` is reused.
+
+**File:** [grammar/02-pluralization.md](grammar/02-pluralization.md)
 
 ---
 
@@ -134,19 +152,27 @@ Examples:
 
 ```text
 Ei de maimai
+
 Ei di de maimai di
+
 Ao de maimai
+
 Sa de maimai
 ```
 
 **my goat**
+
 **our goats**
+
 **your goat**
+
 **his/her goat**
 
 The same structure can be used for other relationships when appropriate.
 
-**File:** [grammar/03-possession.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/03-possession.md?utm_source=chatgpt.com)
+The system therefore treats possession as part of a broader relationship structure rather than creating separate possessive forms for every pronoun.
+
+**File:** [grammar/03-possession.md](grammar/03-possession.md)
 
 ---
 
@@ -172,7 +198,9 @@ Ei la [teacher].
 
 Here, `[teacher]` is a placeholder because the Luma Lina word for this concept has not been established.
 
-**File:** [grammar/04-copula.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/04-copula.md?utm_source=chatgpt.com)
+The placeholder is therefore not part of the official vocabulary.
+
+**File:** [grammar/04-copula.md](grammar/04-copula.md)
 
 ---
 
@@ -192,15 +220,17 @@ Ei na yum buff.
 
 `na` can also be used as a negative response to a yes/no question.
 
-**File:** [grammar/05-negation.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/05-negation.md?utm_source=chatgpt.com)
+Using one general negation marker keeps negative structures consistent instead of requiring separate negative forms for different types of sentences.
+
+**File:** [grammar/05-negation.md](grammar/05-negation.md)
 
 ---
 
-## Questions
+# Questions
 
 Luma Lina currently has two main question systems.
 
-### Yes/No Questions
+## Yes/No Questions
 
 `ma` marks a yes/no question.
 
@@ -210,7 +240,9 @@ Ao yum buff ma?
 
 **Do you eat meat?**
 
-### Information Questions
+The basic sentence structure remains intact, with `ma` added as the question marker.
+
+## Information Questions
 
 `Sao` replaces the missing information in an information question.
 
@@ -222,16 +254,20 @@ Ei yum Sao?
 
 The question structure keeps the missing information in the position where the answer would normally occur.
 
-### Boolean Answers
+This allows information questions to reuse the normal sentence structure rather than requiring a separate question syntax.
+
+## Boolean Answers
 
 The current vocabulary includes:
 
 * `yah` = yes
 * `na` = no
 
-The status of `yah` is **Proposed**, not Official, until explicitly accepted.
+Both are **Official**.
 
-**File:** [grammar/06-questions.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/06-questions.md?utm_source=chatgpt.com)
+`yah` is the positive Boolean answer, while `na` is the negative Boolean answer and also functions as the general negation marker.
+
+**File:** [grammar/06-questions.md](grammar/06-questions.md)
 
 ---
 
@@ -248,22 +284,27 @@ The current **Proposed** system places the demonstrative directly before the nou
 
 ```text
 ti maimai
+
 ti maimai di
 
 ta maimai
+
 ta maimai di
 ```
 
 **this goat**
+
 **these goats**
 
 **that goat**
+
 **those goats**
 
 The structure is:
 
 ```text
 Demonstrative + Noun
+
 Demonstrative + Noun + di
 ```
 
@@ -271,16 +312,20 @@ Examples with the copula:
 
 ```text
 ti la maimai.
+
 ti la maimai di.
 
 ta la maimai.
+
 ta la maimai di.
 ```
 
 **This is a goat.**
+
 **These are goats.**
 
 **That is a goat.**
+
 **Those are goats.**
 
 This follows the general principle that `di` comes after the word it pluralizes.
@@ -293,12 +338,13 @@ It replaces the earlier structure:
 
 ```text
 ti di maimai di
+
 ta di maimai di
 ```
 
 but it should not be treated as an Official rule until explicitly accepted.
 
-**File:** [grammar/07-demonstratives.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/07-demonstratives.md?utm_source=chatgpt.com)
+**File:** [grammar/07-demonstratives.md](grammar/07-demonstratives.md)
 
 ---
 
@@ -310,19 +356,25 @@ The current established verb `yum` means **eat**.
 
 ```text
 Ei yum buff.
+
 Sa yum buff.
+
 Ei di yum buff.
 ```
 
 **I eat meat.**
+
 **He/she eats meat.**
+
 **We eat meat.**
 
 The verb remains `yum` in every case.
 
+This means that changes in the subject do not require changes to the verb.
+
 Tense and aspect systems may be developed separately as the language grows.
 
-**File:** [grammar/08-verbs.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/08-verbs.md?utm_source=chatgpt.com)
+**File:** [grammar/08-verbs.md](grammar/08-verbs.md)
 
 ---
 
@@ -340,7 +392,9 @@ The grammar documentation also explains how word order interacts with:
 * the copula;
 * other grammatical structures.
 
-**File:** [grammar/09-word-order.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/grammar/09-word-order.md?utm_source=chatgpt.com)
+Word order is kept as regular as possible so that individual grammatical systems can be combined without creating unnecessary sentence patterns.
+
+**File:** [grammar/09-word-order.md](grammar/09-word-order.md)
 
 ---
 
@@ -352,8 +406,11 @@ Personal pronouns are normally capitalized:
 
 ```text
 Ei
+
 Ao
+
 Sa
+
 Nu
 ```
 
@@ -361,9 +418,13 @@ Grammatical markers are normally lowercase:
 
 ```text
 di
+
 de
+
 la
+
 na
+
 ma
 ```
 
@@ -375,7 +436,9 @@ The language name is written:
 Luma Lina
 ```
 
-**File:** [writing/capitalization.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/writing/capitalization.md?utm_source=chatgpt.com)
+The capitalization rules are documented separately so that written Luma Lina remains consistent across examples, documentation, and future language resources.
+
+**File:** [writing/capitalization.md](writing/capitalization.md)
 
 ---
 
@@ -404,11 +467,13 @@ The current vocabulary is intentionally small while the grammatical foundation i
 | `luma`   | beautiful                        |
 | `lina`   | language                         |
 
-`yah` is currently **Proposed**.
+All words listed above are currently **Official**.
 
-**Complete vocabulary:** [vocabulary/vocabulary.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/vocabulary/vocabulary.md?utm_source=chatgpt.com)
+**Complete vocabulary:** [vocabulary/vocabulary.md](vocabulary/vocabulary.md)
 
-**Core vocabulary:** [vocabulary/core-words.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/vocabulary/core-words.md?utm_source=chatgpt.com)
+**Core vocabulary:** [vocabulary/core-words.md](vocabulary/core-words.md)
+
+The vocabulary system is intended to remain practical and expandable. New words should be easy to pronounce, easy to remember, distinct from existing words, and compatible with the developing sound system.
 
 ---
 
@@ -416,13 +481,13 @@ The current vocabulary is intentionally small while the grammatical foundation i
 
 The syntax documentation explains how individual grammatical systems work together.
 
-### Sentence Structure
+## Sentence Structure
 
 `syntax/sentence-structure.md` documents sentence construction and the combination of grammatical elements.
 
-**File:** [syntax/sentence-structure.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/syntax/sentence-structure.md?utm_source=chatgpt.com)
+**File:** [syntax/sentence-structure.md](syntax/sentence-structure.md)
 
-### Placeholder Convention
+## Placeholder Convention
 
 `syntax/placeholder-convention.md` explains how English words and other temporary labels are represented when a Luma Lina word has not yet been established.
 
@@ -434,7 +499,7 @@ Ei la [teacher].
 
 Here, `[teacher]` is explicitly a placeholder and is **not** part of the Luma Lina vocabulary.
 
-**File:** [syntax/placeholder-convention.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/syntax/placeholder-convention.md?utm_source=chatgpt.com)
+**File:** [syntax/placeholder-convention.md](syntax/placeholder-convention.md)
 
 ---
 
@@ -442,7 +507,7 @@ Here, `[teacher]` is explicitly a placeholder and is **not** part of the Luma Li
 
 Actual language examples are collected in:
 
-**File:** [examples/example-sentences.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/examples/example-sentences.md?utm_source=chatgpt.com)
+**File:** [examples/example-sentences.md](examples/example-sentences.md)
 
 The examples demonstrate the current grammar, including:
 
@@ -458,6 +523,8 @@ The examples demonstrate the current grammar, including:
 * combinations of existing grammatical systems.
 
 Examples demonstrate how the language works, but **an example does not automatically create a new grammatical rule**.
+
+This distinction is important because the language is developed through testing. An example can show how a proposed idea might work without making that idea part of the Official grammar.
 
 ---
 
@@ -489,11 +556,11 @@ An idea that was considered and intentionally discarded.
 
 Rejected ideas are recorded so that previously explored solutions do not need to be rediscovered.
 
-### Development Files
+## Development Files
 
-* [development/proposals.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/development/proposals.md?utm_source=chatgpt.com)
-* [development/experiments.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/development/experiments.md?utm_source=chatgpt.com)
-* [development/rejected.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/development/rejected.md?utm_source=chatgpt.com)
+* [development/proposals.md](development/proposals.md)
+* [development/experiments.md](development/experiments.md)
+* [development/rejected.md](development/rejected.md)
 
 These files document development history. They do not override the Official grammar.
 
@@ -503,45 +570,81 @@ These files document development history. They do not override the Official gram
 
 ```text
 Luma-Lina/
+
 │
+
 ├── README.md
+
 ├── LICENSE.md
+
 ├── repo-structure.md
+
 │
+
 ├── grammar/
+
 │   ├── 01-pronouns.md
+
 │   ├── 02-pluralization.md
+
 │   ├── 03-possession.md
+
 │   ├── 04-copula.md
+
 │   ├── 05-negation.md
+
 │   ├── 06-questions.md
+
 │   ├── 07-demonstratives.md
+
 │   ├── 08-verbs.md
+
 │   └── 09-word-order.md
+
 │
+
 ├── vocabulary/
+
 │   ├── vocabulary.md
+
 │   └── core-words.md
+
 │
+
 ├── syntax/
+
 │   ├── sentence-structure.md
+
 │   └── placeholder-convention.md
+
 │
+
 ├── writing/
+
 │   └── capitalization.md
+
 │
+
 ├── examples/
+
 │   └── example-sentences.md
+
 │
+
 └── development/
+
     ├── proposals.md
+
     ├── experiments.md
+
     └── rejected.md
 ```
 
-**Detailed repository structure:** [repo-structure.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/repo-structure.md?utm_source=chatgpt.com)
+**Detailed repository structure:** [repo-structure.md](repo-structure.md)
 
-**License:** [LICENSE.md](https://github.com/itsAdeelAlam/Luma-Lina/blob/main/LICENSE.md?utm_source=chatgpt.com)
+**License:** [LICENSE.md](LICENSE.md)
+
+The repository is divided by function so that grammar, vocabulary, syntax, writing conventions, examples, and development history can be maintained separately.
 
 ---
 
@@ -564,6 +667,10 @@ This process helps prevent the language from accumulating rules simply because t
 Existing grammatical markers should be reused whenever possible.
 
 For example, if `di` already expresses plurality, the preferred approach is to reuse `di` rather than create another plural system for a new grammatical category.
+
+The same principle applies to possession, negation, questions, demonstratives, and other grammatical functions.
+
+The purpose is not to eliminate every distinction. The purpose is to make each distinction earn its place in the language.
 
 ---
 
@@ -591,6 +698,8 @@ The current development priority is to **use and test the existing system before
 
 Practical sentence testing is an important part of development. A rule should work across multiple ordinary sentences before becoming part of the Official language.
 
+This allows the language to develop from actual use rather than from a growing collection of rules created only in theory.
+
 ---
 
 # Future Development
@@ -610,6 +719,8 @@ As the language grows, the project may develop:
 * resources for linguistic and computational research.
 
 Future additions should follow the same principles of simplicity, consistency, compositionality, and deliberate testing.
+
+New systems should also remain compatible with the existing grammar whenever possible.
 
 ---
 
