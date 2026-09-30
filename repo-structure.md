@@ -15,7 +15,7 @@ The repository structure is **not permanent**. It may change as Luma Lina develo
 ## Current Structure
 
 ```text
-Luma-Lina/
+LumaLina/
 
 │
 ├── README.md
@@ -67,7 +67,7 @@ This file should be developed after the individual documentation becomes stable.
 
 ### [`LICENSE.md`](LICENSE.md)
 
-Contains the official **Luma-Lina Language License 1.0 (LLL-1.0)**.
+Contains the official **LumaLina Language License 1.0 (LLL-1.0)**.
 
 The license defines how Luma Lina and its project materials may be used, copied, modified, shared, and distributed. This includes the language rules, vocabulary, documentation, examples, and other materials included in the project.
 

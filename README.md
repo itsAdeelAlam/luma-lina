@@ -641,7 +641,7 @@ These files document development history. They do not override the Official gram
 
 ````text
 ```text
-Luma-Lina/
+LumaLina/
 ├── README.md
 ├── LICENSE.md
 ├── repo-structure.md
